@@ -1,7 +1,7 @@
 sudo apt update -y
 
 # Essentials
-sudo apt install -y git build-essential sshfs nmon htop pigz p7zip-full pwgen cmake software-properties-common
+sudo apt install -y git build-essential sshfs nmon htop pigz p7zip-full pwgen cmake software-properties-common curl
 
 # Git
 git config --global credential.helper store

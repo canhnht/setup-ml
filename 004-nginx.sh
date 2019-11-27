@@ -5,7 +5,7 @@ sudo apt install -y nginx
 sudo ufw app list
 sudo ufw allow 'Nginx HTTP'
 sudo ufw status
-systemctl status nginx
+sudo systemctl status nginx
 curl -4 icanhazip.com
 
 # https://towardsdatascience.com/my-first-step-for-deep-learning-adventure-with-udacity-and-coursera-ee135042ac1e
