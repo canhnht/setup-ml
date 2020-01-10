@@ -25,3 +25,6 @@ ssh-copy-id ...
 
 # Firewall https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-18-04
 # Static IP https://linuxize.com/post/how-to-configure-static-ip-address-on-ubuntu-18-04/
+
+# Mosh https://mosh.org
+sudo apt-get install mosh

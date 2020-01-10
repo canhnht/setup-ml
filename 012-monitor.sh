@@ -14,8 +14,8 @@ sudo apt-get -f install
 service monitorix status
 tail -f /var/log/monitorix
 
-# Glances
+# Glances https://nicolargo.github.io/glances/
 # https://www.booleanworld.com/install-use-glances-monitor-linux-systems/
-sudo apt-get install glances
+curl -L https://bit.ly/glances | /bin/bash
 glances -w -p 61001
-ssh -NfL 61001:localhost:61001 ai-lab-1
+ssh -NfL 60002:localhost:60002 ai-lab-2-external

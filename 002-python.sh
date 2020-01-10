@@ -2,7 +2,7 @@
 sudo apt -y install python3-dev python3-pip
 
 # Virtualenvs
-pip3 install virtualenv virtualenvwrapper
+pip3 install virtualenv virtualenvwrapper awscli
 
 # Init bashrc
 export WORKON_HOME=~/.virtualenvs
