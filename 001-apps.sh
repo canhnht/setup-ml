@@ -22,3 +22,6 @@ gcc --version
 # sensors
 sudo apt-get install lm-sensors
 sudo sensors-detect
+
+# Sync dotfiles
+scp dotfiles/.gitconfig ai-lab-2:~
