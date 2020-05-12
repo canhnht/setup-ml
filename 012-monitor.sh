@@ -17,5 +17,10 @@ tail -f /var/log/monitorix
 # Glances https://nicolargo.github.io/glances/
 # https://www.booleanworld.com/install-use-glances-monitor-linux-systems/
 curl -L https://bit.ly/glances | /bin/bash
-glances -w -p 61001
-ssh -NfL 60002:localhost:60002 ai-lab-2-external
+glances -w -p 60003
+ssh -NfL 60004:localhost:60004 ai-lab-4
+
+# Clear RAM cache and SWAP
+# https://www.tecmint.com/clear-ram-memory-cache-buffer-and-swap-space-on-linux/
+sudo swapoff -a && sudo swapon -a
+echo "echo 1 > /proc/sys/vm/drop_caches"
