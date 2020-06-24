@@ -17,13 +17,16 @@ tail -f /var/log/monitorix
 # Glances https://nicolargo.github.io/glances/
 # https://www.booleanworld.com/install-use-glances-monitor-linux-systems/
 curl -L https://bit.ly/glances | /bin/bash
-glances -w -p 61001
-ssh -NfL 5000:localhost:5000 ai-lab-2-external
+glances -w -p 60003
+ssh -NfL 60004:localhost:60004 ai-lab-4
 autossh -M 0 -f -T -N ai-lab-2-external
 
 autossh -M 20000 -f -N your_public_server -R 1234:localhost:22 -C
 # https://thomas-barthelemy.github.io/2016/05/02/permanent-ssh-tunnel/
 autossh -M 0 -f -q -N -L 8000:REMOTE_HOST:REMOTE_PORT SSH_USER@SSH_HOST
 
-# Clear RAM + SWAP
+
+# Clear RAM cache and SWAP
+# https://www.tecmint.com/clear-ram-memory-cache-buffer-and-swap-space-on-linux/
 sudo swapoff -a && sudo swapon -a
+echo "echo 1 > /proc/sys/vm/drop_caches"
