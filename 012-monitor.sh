@@ -19,6 +19,16 @@ tail -f /var/log/monitorix
 curl -L https://bit.ly/glances | /bin/bash
 glances -w -p 60003
 ssh -NfL 60004:localhost:60004 ai-lab-4
+ssh -NfL 50099:localhost:50099 vais-4
+
+ssh -NfL 8091:localhost:8091 ai-lab-1
+ssh -NfL 8881:localhost:8881 ai-lab-1
+
+ssh -NfL 8094:localhost:8094 ai-lab-4
+ssh -NfL 8884:localhost:8884 ai-lab-4
+
+ssh -NfL 8093:localhost:8093 ai-lab-3
+ssh -NfL 8883:localhost:8883 ai-lab-3
 
 # Clear RAM cache and SWAP
 # https://www.tecmint.com/clear-ram-memory-cache-buffer-and-swap-space-on-linux/
