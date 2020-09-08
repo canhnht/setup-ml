@@ -29,6 +29,12 @@ ssh -NfL 8884:localhost:8884 ai-lab-4
 
 ssh -NfL 8093:localhost:8093 ai-lab-3
 ssh -NfL 8883:localhost:8883 ai-lab-3
+autossh -M 0 -f -T -N ai-lab-2-external
+
+autossh -M 20000 -f -N your_public_server -R 1234:localhost:22 -C
+# https://thomas-barthelemy.github.io/2016/05/02/permanent-ssh-tunnel/
+autossh -M 0 -f -q -N -L 8000:REMOTE_HOST:REMOTE_PORT SSH_USER@SSH_HOST
+
 
 # Clear RAM cache and SWAP
 # https://www.tecmint.com/clear-ram-memory-cache-buffer-and-swap-space-on-linux/
