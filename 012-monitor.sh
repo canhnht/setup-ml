@@ -29,6 +29,11 @@ ssh -NfL 8884:localhost:8884 ai-lab-4
 
 ssh -NfL 8093:localhost:8093 ai-lab-3
 ssh -NfL 8883:localhost:8883 ai-lab-3
+# https://medium.com/faun/setting-up-a-production-environment-using-our-local-development-server-and-aws-f5eea3b5be60
+ssh -N -i /path/to/key ec2-user@aws-hostname -R 4000:localhost:8000
+ssh -NfL 8888:localhost:8888 ssh-public
+ssh -N -R 8888:localhost:8888 ssh-public
+
 autossh -M 0 -f -T -N ai-lab-2-external
 
 autossh -M 20000 -f -N your_public_server -R 1234:localhost:22 -C
