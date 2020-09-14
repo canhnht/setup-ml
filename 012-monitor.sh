@@ -33,6 +33,7 @@ ssh -NfL 8883:localhost:8883 ai-lab-3
 ssh -N -i /path/to/key ec2-user@aws-hostname -R 4000:localhost:8000
 ssh -NfL 8888:localhost:8888 ssh-public
 ssh -N -R 8888:localhost:8888 ssh-public
+sudo netstat -tulpn | grep sshd
 
 autossh -M 0 -f -T -N ai-lab-2-external
 
