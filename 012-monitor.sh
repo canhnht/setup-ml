@@ -24,6 +24,9 @@ ssh -NfL 50099:localhost:50099 vais-4
 ssh -NfL 8091:localhost:8091 ai-lab-1
 ssh -NfL 8881:localhost:8881 ai-lab-1
 
+ssh -NfL 8092:localhost:8092 ai-lab-2
+ssh -NfL 8882:localhost:8882 ai-lab-2
+
 ssh -NfL 8094:localhost:8094 ai-lab-4
 ssh -NfL 8884:localhost:8884 ai-lab-4
 
