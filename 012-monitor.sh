@@ -41,6 +41,8 @@ sudo netstat -tulpn | grep sshd
 autossh -M 0 -f -T -N ai-lab-2-external
 
 autossh -M 20000 -f -N your_public_server -R 1234:localhost:22 -C
+autossh -M 20000 -f -N ssh-public -R 8888:localhost:8888 -C
+autossh -M 20001 -f -N ssh-public -R 9999:localhost:9999 -C
 # https://thomas-barthelemy.github.io/2016/05/02/permanent-ssh-tunnel/
 autossh -M 0 -f -q -N -L 8000:REMOTE_HOST:REMOTE_PORT SSH_USER@SSH_HOST
 
